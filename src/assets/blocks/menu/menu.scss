@@ -1,0 +1,118 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+
+    &__link {
+        font-family: 'Roboto', sans-serif;
+        font-size: rem(16);
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--font-color-light);
+        transition: color .3s;
+        
+        &:hover {
+            color: $font-color-dark;
+        }
+    }
+
+    &__link_order {
+        padding: 8px 20px;
+        font-weight: 500;
+        color: $base-color-light;
+        background-color: $attention-color;
+        border-radius: $border-radius-small;
+        transition: opacity .3s;
+
+        &:hover {
+            color: $base-color-light;
+            opacity: .85;
+        }
+    }
+    
+    &__mobile-trigger {
+        display: none;
+    }
+
+    @include breakpoint-max($tablet) {
+        order: 3;
+        display: block;
+        height: 0;
+        width: 100%;
+        text-align: center;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform .3s;
+
+        &__mobile-show {
+            height: auto;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            transform: scaleY(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        &__link {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: rem(18);
+            text-align: center;
+        }
+
+        &__link_order {
+            display: inline-block;
+            width: auto;
+            margin-top: 8px;
+            padding: 10px 20px;
+        }
+
+        &__mobile-trigger {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding-right: 12px;
+            text-align: right;
+            line-height: 0;
+
+            svg {
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+            }
+        }
+        
+        &__mobile-open {
+            display: block;
+
+            &_none {
+                display: none;
+            }
+        }
+        
+        &__mobile-close {
+            display: block;
+            
+            &_none {
+                display: none;
+            }
+        }
+    }
+
+
+    @include breakpoint-max($small-phone) {
+        &__mobile-trigger {
+            order: 1;
+            padding-right: 10px;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" sizes="32x32" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam placeat provident. </title>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam placeat provident.">
+    <meta property="og:title" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam placeat provident.">
+    <meta property="og:site_name" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam placeat provident.">
+    <meta property="og:url" content="https://portfoliouchenika.ru/">
+    <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam placeat provident.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://portfoliouchenika.ru/images/og.jpg">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lorem ipsum" />
+    <meta property="og:locale" content="ru_RU" />
+</head>
+<body x-data="{
+        modalPolicyHide: true,
+        mobileMenuHide: true,
+        modalSendSuccessHide: true,
+        sendFail: false,
+        formName: '',
+        formPhone: ''
+    }">
+    {{> header }}
+
+    <main class="main">
+
+        {{> banner }}
+
+        {{> about }}
+
+        {{> quick-steps }}
+
+        {{> portfolios }}
+
+        {{> price }}
+
+        {{> contacts }}
+
+        {{> work }}
+
+        {{> result }}
+
+        {{> finish }}
+
+        {{> individual }}
+
+        {{> faq }}
+    </main>
+
+    {{> footer}}
+
+    {{> modals}}
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

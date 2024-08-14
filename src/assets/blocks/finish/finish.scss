@@ -1,0 +1,106 @@
+.finish {
+    margin-bottom: var(--base-indent);
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__variants {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &__variant {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 31%;
+        padding: 40px;
+        font-size: rem(20);
+        font-weight: 500;
+        background-image: url("/images/assets/star.webp");
+        background-position: 0 0;
+        background-color: $main-color;
+        border-radius: $border-radius-normal;
+        box-shadow: $box-shadow-base;
+        animation: stars;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 70px;
+            height: 70px;
+            background-image: url("/images/assets/print.webp");
+            background-size: 100% 100%;
+            opacity: .8;
+        }
+
+        &:nth-child(2)::after {
+            background-image: url("/images/assets/grand.webp");
+        }
+
+        &:nth-child(3)::after {
+            background-image: url("/images/assets/phone.webp");
+        }
+    }
+
+    &__after {
+        margin-bottom: 60px;
+        font-size: rem(24);
+        font-weight: 500;
+    }
+
+    &__selection {
+        display: inline-block;
+        margin-bottom: 2px;
+        padding: 3px 12px;
+        border-radius: 20px;
+        background-color: $selection-color;
+        color: $base-color-light;
+
+        &:nth-child(2) {
+            background-color: $main-color;
+            color: $font-color;
+        }
+
+        &:nth-child(3) {
+            background-color: $attention-color;
+        }
+    }
+
+    @include breakpoint-max($desktop) {
+        &__variant {
+            padding:44px 24px;
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        &__variants {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        &__variant {
+            width: 100%;
+            margin-bottom: 32px;
+            box-shadow: $box-shadow-base-light;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        &__variant {
+            padding: 50px 50px 56px 24px;
+        }
+
+        &__after {
+            margin-bottom: 40px;
+            font-size: rem(20);
+        }
+    }
+}

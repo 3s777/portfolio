@@ -1,0 +1,12 @@
+.step {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: rem(28);
+    font-weight: 700;
+    background: $base-color-light;
+    border-radius: $border-radius-normal;
+
+    @include breakpoint-max($desktop) {
+        font-size: rem(24);
+    }
+}

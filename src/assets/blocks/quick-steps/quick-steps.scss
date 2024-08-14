@@ -1,0 +1,176 @@
+.quick-steps {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 16px;
+        margin-right: 20px;
+        font-size: rem(32);
+        font-weight: 700;
+    }
+
+    &__user {
+        width: 100%;
+        margin-bottom: 60px;
+        padding-right: 150px;
+    }
+
+    &__seller {
+        width: 100%;
+        margin-bottom: 60px;
+        padding-left: 150px;
+        text-align: right;
+
+        .quick-steps__title {
+            margin-right: 0;
+            text-align: center;
+        }
+
+        .quick-steps__item {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+    }
+
+    &__more {
+        width: 100%;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        width: auto;
+        padding: 16px 48px;
+        font-size: rem(20);
+    }
+
+    &__button-arrow {
+        display: block;
+        stroke: #fff;
+        stroke-width: 2px;
+        animation-name: arrow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 22px;
+        margin-right: 24px;
+        padding: 16px 48px 16px 20px;
+        border-radius: $border-radius-normal;
+        font-size: rem(20);
+        background-color: $main-color-light;
+        box-shadow: $box-shadow-small-light;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 15px);
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg width='30px' height='30px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 15L16 12M16 12L13 9M16 12H8M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' stroke='%238583ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-right: 20px;
+        }
+        
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    &__item:nth-child(2) {
+        background-color: #9af9ff;
+    }
+
+    &__item:nth-child(3) {
+        background-color: #ffc5f8;
+    }
+
+    &__item:nth-child(4) {
+        background-color: #b4e0ff;
+    }
+
+    &__item:nth-child(5) {
+        background-color: #fff579;
+    }
+
+    &__item:nth-child(6) {
+        background-color: #beffae;
+    }
+
+    &__item_seller:nth-child(2) {
+        background-color: #ffd0b0;
+    }
+
+    &__item_seller:nth-child(3) {
+        background-color: #d3c5ff;
+    }
+
+    &__item_seller:nth-child(4) {
+        background-color: #beffae;
+    }
+
+    &__item_seller:nth-child(5) {
+        background-color: #aefff7;
+    }
+
+    @include breakpoint-max($desktop) {
+        &__user {
+            padding-right: 80px;
+        }
+
+        &__seller {
+            padding-left: 80px;
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        &__user {
+            padding-right: 0;
+        }
+
+        &__seller {
+            padding-left: 0;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        &__user {
+            margin-bottom: 40px;
+        }
+
+        &__seller {
+            margin-bottom: 40px;
+        }
+
+        &__more {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include breakpoint-max($medium-phone) {
+        &__item::after {
+            transform: rotate(90deg);
+        }
+
+        &__button {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: rem(16);
+        }
+    }
+}

@@ -1,0 +1,302 @@
+.banner {
+    position: relative;
+    margin-bottom: 16px;
+    overflow: hidden;
+    background: $main-color;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 96px;
+    }
+
+    &__offer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 48%;
+    }
+
+    &__form {
+        flex-basis: 48%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        width: 100%;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        font-size: rem(56);
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    &__price {
+        font-size: rem(36);
+        font-weight: 700;
+    }
+
+    &__price-value {
+        display: inline-block;
+        padding: 6px 20px;
+        background-color: $attention-color;
+        font-size: rem(36);
+        color: $base-color-light;
+        box-shadow: $box-shadow-small-light;
+        border-radius: $border-radius-normal;
+    }
+
+    &__price-currency {
+        font-size: rem(18);
+    }
+
+    &__form-inner {
+        position: relative;
+        z-index: 110;
+        width: 320px;
+        padding: 24px;
+        background-color: $main-color-light;
+        box-shadow: $box-shadow-base;
+        border-radius: $border-radius-normal;
+    }
+
+    &__form-title {
+        margin-bottom: 8px;
+        font-size: rem(18);
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    &__form-field {
+        display: block;
+        margin-bottom: 0;
+        padding: 4px 0;
+    }
+
+    &__form-input {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    &__form-label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: rem(12);
+        opacity: .7;
+    }
+
+    &__form-button {
+        margin-top: 12px;
+    }
+
+    &__social {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
+    
+    &__social-link {
+        text-decoration: none;
+    }
+
+    &__social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__social-messengers {
+        display: flex;
+        gap: 8px
+    }
+
+    .ready &__portfolio {
+        animation: portfolio;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+    &__portfolio {
+        position: absolute;
+        z-index: 100;
+        left: calc(50% - 275px);
+        bottom: -150px;
+        overflow: hidden;
+        border-radius: $border-radius-normal;
+        box-shadow: 0 0 16px rgba(85, 85, 85, 0.7);
+        transform: translateY(100%);
+        transition: opacity .3s;
+
+        &:nth-child(2) {
+            z-index: 90;
+            left: calc(50% - 50px);
+            bottom: -100px;
+            opacity: .8;
+            animation-delay: 1s;
+        }
+
+        &:nth-child(3) {
+            z-index: 90;
+            left: calc(50% + 400px);
+            bottom: -70px;
+            opacity: .7;
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(4) {
+            z-index: 80;
+            left: calc(50% + 185px);
+            bottom: -10px;
+            opacity: .8;
+            animation-delay: 2s;
+        }
+
+        &:nth-child(5) {
+            left: calc(50% + 555px);
+            bottom: -150px;
+            opacity: 1;
+            animation-delay: 2s;
+        }
+
+        &:nth-child(6) {
+            z-index: 80;
+            left: calc(50% - 500px);
+            bottom: -220px;
+            opacity: .85;
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(7) {
+            z-index: 70;
+            left: calc(50% - 700px);
+            bottom: -260px;
+            opacity: .8;
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(8) {
+            z-index: 60;
+            left: calc(50% - 885px);
+            bottom: -300px;
+            opacity: .8;
+            animation-delay: 1.5s;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__slider {
+        display: none;
+    }
+
+    @include breakpoint-max($desktop) {
+        &__offer {
+            flex-basis: 60%;
+        }
+
+        &__form {
+            flex-basis: 38%;
+        }
+
+        &__title {
+            font-size: rem(48);
+        }
+
+        &__portfolio {
+            &:nth-child(4) {
+                z-index: 80;
+                left: calc(50% + 150px);
+                bottom: -10px;
+                opacity: .8;
+                animation-delay: 2s;
+            }
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        &__inner {
+            flex-wrap: wrap;
+            padding-top: 20px;
+            padding-bottom: 120px;
+        }
+
+        &__offer {
+            flex-basis: 50%;
+        }
+
+        &__form {
+            flex-basis: 48%;
+        }
+
+        &__form-inner {
+            width: 100%;
+        }
+
+        &__title {
+            margin-top: 0;
+            font-size: rem(40);
+        }
+
+        &__price {
+            font-size: rem(30);
+        }
+
+        &__price-value {
+            padding: 4px 16px;
+        }
+
+        &__portfolio {
+            left: calc(50% - 325px);
+
+            &:nth-child(2) {
+                left: calc(50% - 80px);
+            }
+        }
+    }
+    
+    @include breakpoint-max($big-phone) {
+        &__inner {
+            flex-wrap: wrap;
+            padding-top: 12px;
+            padding-bottom: 60px;
+        }
+
+        &__offer {
+            flex-basis: 100%;
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            font-size: rem(48);
+        }
+
+        &__form {
+            flex-basis: 100%;
+        }
+
+        &__portfolios {
+            display: none;
+        }
+
+        &__portfolio {
+            display: none;
+        }
+
+        &__slider {
+            display: block;
+            width: 300px;
+            margin-bottom: 20px;
+            padding-bottom: 30px;
+        }
+    }
+
+    @include breakpoint-max($small-phone) {
+        &__slider {
+            width: 250px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes portfolio {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes stars {
+    100% {
+        background-position: 75px 75px;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: rotate(90deg) translateX(-5px);
+    }
+
+    50% {
+        transform: rotate(90deg) translateX(5px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(-5px);
+    }
+}

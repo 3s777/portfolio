@@ -1,0 +1,10 @@
+{
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+        "font-family-name-quotes": null,
+        "color-function-notation": null,
+        "selector-class-pattern": null,
+        "no-descending-specificity": null,
+        "alpha-value-notation": "number"
+    }
+}

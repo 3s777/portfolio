@@ -1,0 +1,35 @@
+.social {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    &__link {
+        text-decoration: none;
+
+        img {
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        &__link {
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    @include breakpoint-max($small-phone) {
+        gap: 10px;
+        order: 2;
+
+        &__link {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

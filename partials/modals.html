@@ -1,0 +1,53 @@
+<!--noindex-->
+<div class="modal" x-cloak :class="modalSendSuccessHide ? '' : 'modal_show'">
+    <section class="modal__content modal__content_size_small" x-on:click.outside="modalPolicyHide = true">
+        <div class="modal__header">
+            <h2 class="title modal__title">Спасибо за заявку</h2>
+        </div>
+
+        <div class="modal__body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, nisi.
+        </div>
+
+        <div class="modal__close">
+            <svg
+                x-on:click="modalSendSuccessHide = true"
+                class="icon close-icon"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24">
+                <g>
+                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/>
+                    <path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/>
+                </g>
+            </svg>
+        </div>
+    </section>
+</div>
+
+<div class="modal" x-cloak :class="modalPolicyHide ? '' : 'modal_show'">
+    <section class="modal__content modal__content_size_big" x-on:click.outside="modalPolicyHide = true">
+        <div class="modal__header">
+            <h2 class="title modal__title">Пользовательское соглашение</h2>
+        </div>
+
+        <div class="modal__body policy">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deserunt, fugit id incidunt iusto laudantium libero non omnis perferendis porro quaerat quas qui quia quo reprehenderit tenetur, voluptate voluptatibus. Accusamus error esse eveniet laborum magni, molestiae nihil nobis quo reiciendis repudiandae rerum sapiente sit tempore ut veniam voluptatem voluptatum. Dolorem dolores incidunt modi praesentium ratione. Adipisci alias eligendi id iure quasi, vel voluptas! Aliquam autem dignissimos dolorum esse ipsa quidem similique sint voluptatem? Ab assumenda aut doloribus eos exercitationem, expedita hic laudantium nihil possimus quasi reiciendis, rerum sequi similique. Illo in incidunt officia quibusdam totam? Accusantium ad ea itaque unde!</p>
+        </div>
+
+        <div class="modal__close">
+            <svg
+                x-on:click="modalPolicyHide = true"
+                class="icon close-icon"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24">
+                <g>
+                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/>
+                    <path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/>
+                </g>
+            </svg>
+        </div>
+    </section>
+</div>
+<!--/noindex-->

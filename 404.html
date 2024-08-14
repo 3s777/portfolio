@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" sizes="32x32" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница не найдена</title>
+    <meta name="description" content="Страница не найдена">
+</head>
+<body x-data="{
+        modalPolicyHide: true,
+        mobileMenuHide: true,
+        modalSendSuccessHide: true
+    }" class="missing__wrapper">
+
+{{> header }}
+
+<main class="missing">
+    <div class="missing__inner">
+        <div class="missing__title">404</div>
+        <div class="missing__content">Страница не найдена</div>
+        <a href="/" class="missing__link">Вернуться на главную</a>
+    </div>
+</main>
+
+{{> footer}}
+
+{{> modals}}
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>

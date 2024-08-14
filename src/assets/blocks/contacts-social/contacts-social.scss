@@ -1,0 +1,79 @@
+.contacts-social {
+    &__link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed var(--main-color);
+        font-size: rem(24);
+        font-weight: 700;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-top: 8px;
+        }
+
+        a {
+            color: $font-color-dark;
+
+            &:hover {
+                color: $attention-color;
+            }
+        }
+    }
+
+    &__link-title {
+        margin-right: 8px;
+        font-weight: 700;
+    }
+
+    &__icon {
+        width: 44px;
+        height: 44px;
+        margin-left: 12px;
+    }
+
+    @include breakpoint-max($desktop) {
+        &__link-title {
+            width: 100%;
+        }
+
+        &__link {
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            font-size: rem(20);
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        &__link {
+            font-size: rem(24);
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        &__link {
+            margin-bottom: 12px;
+            font-size: rem(22);
+        }
+    }
+
+    @include breakpoint-max($phone) {
+        &__link {
+            &:last-child {
+                padding-top: 0;
+            }
+        }
+
+        &__link-title {
+            width: 100%;
+        }
+    }
+
+    @include breakpoint-max($small-phone) {
+        &__link {
+            font-size: rem(20);
+        }
+    }
+}

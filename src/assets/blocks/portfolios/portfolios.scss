@@ -1,0 +1,63 @@
+.portfolios {
+    margin-bottom: var(--base-indent);
+
+    &__inner {
+        padding: 60px 0 50px;
+        background: $main-color;
+    }
+
+    &__header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__step {
+        margin-bottom: 20px;
+    }
+
+    &__slider {
+        width: 100%;
+        height: auto;
+        padding-bottom: 36px;
+    }
+
+    &__preview {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        div {
+            width: 19%;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        margin-bottom: 40px;
+
+        &__inner {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    @include breakpoint-max($phone) {
+        &__slider {
+            .swiper-slide {
+                padding: 10px 50px;
+            }
+        }
+    }
+
+    @include breakpoint-max($small-phone) {
+        &__slider {
+            .swiper-slide {
+                padding: 10px 30px;
+            }
+        }
+    }
+}

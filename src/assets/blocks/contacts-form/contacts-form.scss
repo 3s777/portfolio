@@ -1,0 +1,74 @@
+.contacts-form {
+    padding: 24px;
+    background-color: $main-color-light;
+    box-shadow: $box-shadow-base;
+    border-radius: $border-radius-normal;
+
+    &__title {
+        margin-bottom: 12px;
+        font-size: rem(20);
+    }
+
+    &__field {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &__label {
+        display: block;
+        width: 100%;
+        margin-bottom: 4px;
+        font-size: rem(14);
+        opacity: 0.7;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+    }
+
+    &__select {
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+        background-color: $base-color-light;
+        border-radius: $border-radius-small;
+    }
+
+    &__footer {
+        font-size: rem(10);
+
+        a {
+            color: $font-color-dark;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 20px;
+        font-size: rem(16);
+    }
+
+    &__error {
+        margin-bottom: 16px;
+        padding: 10px;
+        border-radius: $border-radius-small;
+        background-color: #ffa695;
+    }
+
+    @include breakpoint-max($desktop) {
+        &__title {
+            font-size: rem(16);
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        box-shadow: $box-shadow-base-light;
+    }
+}

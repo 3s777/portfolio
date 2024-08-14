@@ -1,0 +1,60 @@
+.header {
+    padding: 28px 0;
+    background: $main-color;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas:
+            "logo menu social"
+            "mobile mobile mobile";
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        padding: 16px 24px;
+        background-color: $main-color-light;
+        color: #5d5d5d;
+        border-radius: $border-radius-big;
+        box-shadow: 0 16px 16px rgba(85, 85, 85, 0.1);
+    }
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &__menu {
+        grid-area: menu;
+    }
+
+    &__mobile-trigger {
+        grid-area: mobile;
+    }
+
+    &__social {
+        grid-area: social;
+    }
+
+    @include breakpoint-max($tablet) {
+        padding-bottom: 20px;
+
+        &__inner {
+            flex-wrap: wrap;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas:
+                "logo mobile social"
+                "menu menu menu";
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        padding-top: 0;
+
+        &__inner {
+            margin-left: -24px;
+            margin-right: -24px;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+    }
+}
+

@@ -1,0 +1,70 @@
+.missing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background: var(--main-color);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    
+    &__inner {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        width: 100%;
+        font-size: 360px;
+        line-height: .8;
+    }
+
+    &__content {
+        font-size: 60px;
+    }
+
+    &__link {
+        display: block;
+        margin-top: 20px;
+        font-size: 48px;
+        text-decoration: underline;
+        color: var(--font-color);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        &__title {
+            font-size: 240px;
+        }
+
+        &__content {
+            font-size: 30px;
+        }
+
+        &__link {
+            font-size: 24px;
+        }
+    }
+
+    @include breakpoint-max($phone) {
+        &__title {
+            font-size: 120px;
+        }
+
+        &__content {
+            font-size: 24px;
+        }
+
+        &__link {
+            font-size: 20px;
+        }
+    }
+}

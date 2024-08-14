@@ -1,0 +1,63 @@
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo header__logo">
+                <img src="/images/assets/logo.svg" width="50" height="50" alt="Логотип портфолио ученика">
+
+                <div class="logo__name">
+                    <div class="logo__row">Портфолио</div>
+                    <div class="logo__row">ученика</div>
+                </div>
+            </div>
+
+            <nav class="menu header__menu" :class="mobileMenuHide ? '' : 'menu__mobile-show'">
+                <a class="menu__link" href="/#about">
+                    О портфолио
+                </a>
+                <a class="menu__link" href="/#portfolios">
+                    Как заказать
+                </a>
+                <a class="menu__link" href="/#faq">
+                    Вопрос-ответ
+                </a>
+                <a class="menu__link menu__link_order" href="/#contacts">
+                    Заказать
+                </a>
+            </nav>
+
+            <div class="menu__mobile-trigger header__mobile-trigger">
+                    <svg x-on:click.prevent.stop="mobileMenuHide = ! mobileMenuHide"
+                        :class="mobileMenuHide ? '' : 'menu__mobile-open_none'"
+                        class="menu__mobile-open"
+                        width="34px"
+                        height="34px"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#5d5d5d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg x-on:click="mobileMenuHide = true"
+                        :class="mobileMenuHide ? 'menu__mobile-close_none' : ''"
+                        class="menu__mobile-close"
+                        width="24px"
+                        height="24px"
+                        fill="#5d5d5d"
+                        viewBox="0 0 24 24">
+                        <g>
+                            <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/>
+                            <path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/>
+                        </g>
+                    </svg>
+            </div>
+
+            <nav class="social header__social">
+                <a class="social__link" href="https://t.me/portfoliouchenika" target="_blank" aria-label="Перейти в Telegram">
+                    <img src="/images/assets/telegram.svg" width="34" height="34" alt="Telegram">
+                </a>
+
+                <a class="social__link" href="https://wa.me/79498277131" target="_blank" aria-label="Перейти в Whatsapp">
+                    <img src="/images/assets/whatsapp.svg" width="34" height="34" alt="Whatsapp">
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>

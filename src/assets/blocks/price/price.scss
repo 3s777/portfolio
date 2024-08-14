@@ -1,0 +1,135 @@
+.price {
+    margin-bottom: 20px;
+
+    &__step {
+        margin-bottom: 20px;
+        background-color: $main-color;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list-tariff {
+        position: relative;
+        width: 30%;
+        font-size: rem(20);
+        background-color: $main-color;
+        border-radius: $border-radius-normal;
+        box-shadow: $box-shadow-base;
+    }
+
+    &__list-title {
+        margin-bottom: 20px;
+        padding: 16px 0;
+        font-size: rem(28);
+        font-weight: 500;
+        text-align: center;
+        border-radius: $border-radius-normal $border-radius-normal 0 0;
+        background-color: $main-color-light;
+    }
+
+    &__list-description {
+        margin-bottom: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 40px;
+        line-height: 1.4;
+    }
+
+    &__list-item {
+        margin-bottom: 12px;
+        padding: 10px 16px;
+        line-height: 1.2;
+        background-color: $main-color-light;
+        border-radius: $border-radius-normal;
+    }
+
+    &__list-selection {
+        display: inline-block;
+        margin-bottom: 2px;
+        padding: 3px 12px;
+        font-weight: 500;
+        border-radius: $border-radius-normal;
+        background-color: $selection-color;
+        color: $base-color-light;
+    }
+
+    &__list-pages {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4px;
+        gap: 4px;
+    }
+
+    &__list-page {
+        display: block;
+        padding: 4px 8px;
+        font-size: rem(16);
+        background-color: $attention-color;
+        color: $base-color-light;
+        border-radius: $border-radius-small;
+    }
+
+    &__value {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 6px 20px;
+        font-size: rem(36);
+        font-weight: 500;
+        color: $base-color-light;
+        background-color: $attention-color;
+        border-radius: $border-radius-normal 0 $border-radius-normal 0;
+    }
+
+    &__value_individual {
+        font-size: rem(32);
+    }
+
+    @include breakpoint-max($desktop) {
+        &__list-tariff {
+            width: 31%;
+            font-size: rem(18);
+        }
+
+        &__list-title {
+            font-size: rem(24);
+        }
+
+        &__list-description {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        &__list-item {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        &__value {
+            font-size: rem(32);
+        }
+
+        &__value_individual {
+            font-size: rem(24);
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        &__list {
+            flex-wrap: wrap;
+        }
+
+        &__list-tariff {
+            width: 100%;
+            margin-bottom: 32px;
+            box-shadow: $box-shadow-base-light;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        margin-bottom: 0;
+    }
+}

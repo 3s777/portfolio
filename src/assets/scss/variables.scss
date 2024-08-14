@@ -1,0 +1,31 @@
+// Colors
+$base-color-light: var(--base-color-light);
+$main-color: var(--main-color);
+$main-color-light: var(--main-color-light);
+$font-color: var(--font-color);
+$font-color-light: var(--font-color-light);
+$font-color-dark: var(--font-color-dark);
+$selection-color: var(--selection-color);
+$background-color: var(--background-color);
+$attention-color: var(--attention-color);
+
+// Border radius
+$border-radius-small: 8px;
+$border-radius-normal: 20px;
+$border-radius-big: 50px;
+
+// Box shadow
+$box-shadow-base: 5px 10px 16px rgba(95, 95, 95, .3);
+$box-shadow-base-light: 5px 8px 16px rgba(95, 95, 95, .2);
+$box-shadow-small-light: 0 3px 7px rgba(85, 85, 85, 0.1);
+
+// Other
+$container-width: 1250px;
+$base-font-size: 16px;
+$base-indent: 100px;
+$desktop: 1300px;
+$tablet: 970px;
+$big-phone: 740px;
+$medium-phone: 600px;
+$phone: 450px;
+$small-phone: 350px;

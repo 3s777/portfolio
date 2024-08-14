@@ -1,0 +1,15 @@
+.button {
+    display: block;
+    padding: 12px;
+    border: 0;
+    font-size: rem(14);
+    color: $base-color-light;
+    background-color: $attention-color;
+    border-radius: $border-radius-small;
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: .85;
+    }
+}

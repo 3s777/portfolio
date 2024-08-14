@@ -1,0 +1,17 @@
+@mixin breakpoint-max($width) {
+  @media screen and (max-width: $width) {
+    @content
+  }
+}
+
+@mixin breakpoint-min($width) {
+  @media screen and (min-width: $width) {
+    @content
+  }
+}
+
+@mixin pseudo($display: block, $position: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $position;
+}

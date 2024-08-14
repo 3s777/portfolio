@@ -1,0 +1,101 @@
+.contacts {
+    margin-bottom: var(--base-indent);
+    padding-top: 80px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__preview {
+        flex-shrink: 0;
+        width: 28%;
+        overflow: hidden;
+        border-radius: $border-radius-normal;
+        box-shadow: $box-shadow-base;
+
+        video {
+            max-width: 100%;
+        }
+    }
+
+    &__preview-image {
+        max-width: 100%;
+    }
+
+    &__info {
+        width: 67%;
+    }
+
+    &__step {
+        margin-bottom: 20px;
+        background-color: $main-color;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__social {
+        width: 48%;
+        flex-shrink: 0;
+    }
+
+    &__social-title {
+        margin-bottom: 30px;
+        font-size: rem(24);
+    }
+
+    &__form {
+        width: 45%;
+    }
+
+    @include breakpoint-max($desktop) {
+        &__inner {
+            align-items: flex-end;
+        }
+
+        &__social-title {
+            font-size: rem(20);
+        }
+
+        &__social {
+            width: 46%;
+        }
+
+        &__form {
+            width: 50%;
+        }
+    }
+    
+    @include breakpoint-max($tablet) {
+        padding-top: 40px;
+
+        &__info {
+            width: 100%;
+        }
+
+        &__preview {
+            display: none;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        padding-top: 30px;
+
+        &__content {
+            flex-wrap: wrap;
+        }
+
+        &__social {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &__form {
+            width: 100%;
+        }
+    }
+}

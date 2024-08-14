@@ -1,0 +1,103 @@
+<section class="banner">
+    <div class="container">
+        <div class="banner__inner">
+            <section class="banner__offer">
+                <div class="banner__offer-inner">
+                    <h1 class="banner__title">Lorem ipsum dolor.</h1>
+                    <div class="banner__price">
+                        Всего за
+                        <span class="banner__price-value">
+                            699<span class="banner__price-currency">руб</span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="swiper banner__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="swiper-slide__link" href="/images/preview/10.webp">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        /images/covers/webp/10x230.webp 230w,
+                                        /images/covers/webp/10x275.webp 275w,
+                                        /images/covers/webp/10x460.webp 460w,
+                                        /images/covers/webp/10x550.webp 550w"
+                                    sizes="(max-width: 350px) 230px, 275px">
+                                <img
+                                    class="swiper-slide__img"
+                                    width="275"
+                                    height="389"
+                                    fetchpriority="high"
+                                    src="/images/covers/10x275.jpg"
+                                    srcset="/images/covers/10x275.jpg 1x, /images/covers/10x550.jpg 2x" alt="Портфолио ученика Осенние краски">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <section class="banner__form">
+                <div class="contacts-form banner__form-inner">
+                    <h2 class="banner__form-title">Оформить заявку</h2>
+
+                    <form @ajax:success="modalSendSuccessHide = false, formName = '', formPhone = ''"
+                          @ajax:error="sendFail = true, formName = '', formPhone = ''"
+                          x-target="send-success"  method="POST"
+                          action="/server/index.php">
+                        <div class="contacts-form__field banner__form-field">
+                            <label class="banner__form-label" for="name">
+                                Ваше имя
+                            </label>
+                            <input x-model="formName" class="text-input banner__form-input" id="name" name="name" type="text" placeholder="Имя" autocomplete="on" required>
+                        </div>
+
+                        <div class="contacts-form__field banner__form-field">
+                            <label class="banner__form-label" for="phone">
+                                Телефон
+                            </label>
+                            <input x-model="formPhone" x-mask="+7 (999) 999-99-99" placeholder="+7 (XXX) XXX-XX-XX" class="text-input banner__form-input" id="phone" name="phone" type="text" required autocomplete="on">
+                        </div>
+
+                        <button class="button banner__form-button contacts-form__button">
+                            Оформить <span id="send-success"></span>
+                        </button>
+
+                        <div x-cloak x-show="sendFail" class="contacts-form__error">
+                            Произошла ошибка, попробуйте отправить позже или напишите нам напрямую в мессенджеры
+                        </div>
+                    </form>
+
+                    <nav class="banner__social">
+                        <div class="banner__social-title">Или напишите мне в мессенджеры</div>
+                        <div class="banner__social-messengers">
+                            <a class="banner__social-link" aria-label="Перейти в Telegram" href="https://t.me/portfoliouchenika" target="_blank">
+                                <img class="banner__social-icon" src="/images/assets/telegram.svg" width="34" height="34" alt="Telegram">
+                            </a>
+                            <a class="banner__social-link" aria-label="Перейти в Whatsapp" href="https://wa.me/79498277131" target="_blank">
+                                <img class="banner__social-icon" src="/images/assets/whatsapp.svg" width="34" height="34" alt="Whatsapp">
+                            </a>
+                        </div>
+                    </nav>
+
+                    <div class="contacts-form__footer banner__form-footer">
+                        Заполняя форму Вы соглашаетесь с <a href="/files/konf.pdf" target="_blank">Политикой конфиденциальности</a> и <a x-on:click.prevent.stop="modalPolicyHide = ! modalPolicyHide" href="">Пользовательским соглашением</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="banner__portfolios">
+        <div class="banner__portfolio">
+            <picture>
+                <source type="image/webp" srcset="/images/covers-desktop/webp/1.webp 1x, /images/covers-desktop/webp/1@2x.webp 2x">
+                <img src="/images/covers-desktop/1.jpg" width="275" height="389" srcset="/images/covers-desktop/1.jpg 1x, /images/covers-desktop/1@2x.jpg 2x" alt="Титульная страница Мое портфолио">
+            </picture>
+        </div>
+    </div>
+</section>

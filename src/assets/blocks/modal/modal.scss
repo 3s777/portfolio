@@ -1,0 +1,75 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+    inset: -70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, .9);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+
+    &_show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 100;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 24px;
+        background-color: $base-color-light;
+        border-radius: $border-radius-normal;
+        box-shadow: $box-shadow-base;
+    }
+
+    &__content_size_extra_small {
+        max-width: 250px;
+    }
+
+    &__content_size_small {
+        max-width: 400px;
+    }
+
+    &__content_size_normal {
+        max-width: 800px;
+    }
+
+    &__content_size_big {
+        max-width: 1200px;
+    }
+
+    &__content_size_large {
+        max-width: 1360px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        cursor: pointer;
+    }
+
+    &__close-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 12px;
+    }
+
+    @include breakpoint-max($small-phone) {
+        &__title {
+            font-size: rem(24);
+        }
+    }
+}

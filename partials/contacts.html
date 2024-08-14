@@ -1,0 +1,105 @@
+<section class="contacts" id="contacts">
+    <div class="container">
+        <div class="contacts__inner">
+            <div class="contacts__info">
+                <div class="step contacts__step" >
+                    Шаг 3
+                </div>
+
+                <h2 class="title title_indent">&#128172; Lorem ipsum dolor sit amet.</h2>
+
+                <div class="contacts__content">
+                    <div class="contacts-social contacts__social">
+                        <h3 class="title contacts__social-title">Lorem ipsum dolor.</h3>
+
+                        <ul>
+                            <li class="contacts-social__link">
+                                <span class="contacts-social__link-title">Telegram:</span>
+                                <a href="https://t.me/portfoliouchenika" target="__blank">@portfoliouchenika</a>
+                                <a href="https://t.me/portfoliouchenika" target="__blank" aria-label="Перейти в Telegram">
+                                    <img class="contacts-social__icon" src="/images/assets/telegram.svg" alt="">
+                                </a>
+                            </li>
+
+                            <li class="contacts-social__link">
+                                <span class="contacts-social__link-title">Whatsapp:</span>
+                                <a href="https://wa.me/79498277131" target="__blank">+7 (949) 827-71-31</a>
+                                <a href="https://wa.me/79498277131" target="__blank" aria-label="Перейти в Whatsapp">
+                                    <img class="contacts-social__icon" src="/images/assets/whatsapp.svg" alt="">
+                                </a>
+                            </li>
+
+                            <li class="contacts-social__link">
+                                <span class="contacts-social__link-title">Email:</span>
+                                <a href="">info@portfoliouchenika.ru</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts-form contacts__form">
+                        <h3 class="contacts-form__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quidem.</h3>
+
+                        <form @ajax:success="modalSendSuccessHide = false, formName = '', formPhone = ''"
+                              @ajax:error="sendFail = true, formName = '', formPhone = ''"
+                              x-target="send-success" method="POST"
+                              action="/server/index.php">
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="contacts__name">
+                                    Ваше имя
+                                </label>
+                                <input x-model="formName" class="text-input contacts-form__input" id="contacts__name" type="text" placeholder="Имя" name="name" required>
+                            </div>
+
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="contacts__phone">
+                                    Телефон
+                                </label>
+                                <input x-model="formPhone" x-mask="+7 (999) 999-99-99" placeholder="+7 (XXX) XXX-XX-XX" class="text-input contacts-form__input" name="phone" id="contacts__phone" type="text" required>
+                            </div>
+
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="contacts__template">
+                                    Выберите шаблон
+                                </label>
+                                <select class="select contacts-form__select" name="portfolio" id="contacts__template">
+                                    <option value="Lorem">Lorem</option>
+                                </select>
+                            </div>
+
+                            <div class="contacts-form__field">
+                                <label class="contacts-form__label" for="contacts__tariff">
+                                    Выберите тариф
+                                </label>
+                                <select class="select contacts-form__select" name="price" id="contacts__tariff">
+                                    <option value="Стандартный">Стандартный</option>
+                                    <option value="Расширенный">Расширенный</option>
+                                    <option value="Индивидуальный">Индивидуальный</option>
+                                </select>
+                            </div>
+
+                            <button class="button contacts-form__button">
+                                Оформить <span id="send-success"></span>
+                            </button>
+
+                            <div x-cloak x-show="sendFail" class="contacts-form__error">
+                                Произошла ошибка, попробуйте отправить позже или напишите нам напрямую в мессенджеры
+                            </div>
+
+                            <div class="contacts-form__footer">
+                                Заполняя форму Вы соглашаетесь с <a href="/files/konf.pdf" target="_blank">Политикой конфиденциальности</a> и <a x-on:click.prevent.stop="modalPolicyHide = ! modalPolicyHide" href="">Пользовательским соглашением</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts__preview">
+                <video autoplay loop muted playsinline poster="/images/assets/video-cover.webp">
+                    <source type="video/webm" src="/video/message.webm">
+                    <source type="video/mp4" src="/video/message.mp4">
+                        <img width="393" height="721" loading="lazy" decoding="async" src="/images/assets/video-cover.jpg" alt="Напишите мне сообщение в мессенджер">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>

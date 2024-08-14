@@ -1,0 +1,104 @@
+.individual {
+    margin-bottom: var(--base-indent);
+    padding: 60px 0 70px;
+    background: $main-color;
+
+    &__content {
+        margin-bottom: 30px;
+        font-size: rem(24);
+        font-weight: 500;
+    }
+    
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contacts-social__link {
+            border-bottom: 1px dashed var(--base-color-light)
+        }
+    }
+
+    &__social {
+        width: 35%;
+    }
+
+    &__contacts-form {
+        width: 60%;
+    }
+    
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__form-field {
+        width: 30%;
+        margin-bottom: 12px;
+    }
+
+    &__form-input {
+        height: 44px;
+    }
+
+    &__form-button {
+        width: 30%;
+        height: 44px;
+        margin-bottom: 12px;
+    }
+
+    &__selection {
+        display: inline-block;
+        margin-bottom: 2px;
+        padding: 3px 12px;
+        border-radius: 20px;
+        background-color: $selection-color;
+        color: $base-color-light;
+    }
+
+    @include breakpoint-max($desktop) {
+        &__social {
+            width: 40%;
+        }
+
+        &__contacts-form {
+            width: 55%;
+        }
+    }
+
+    @include breakpoint-max($tablet) {
+        &__contacts {
+            flex-wrap: wrap;
+        }
+
+        &__social {
+            width: 100%;
+            margin-bottom: 36px;
+        }
+
+        &__contacts-form {
+            width: 100%;
+        }
+    }
+
+    @include breakpoint-max($big-phone) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &__form-field {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        &__form-button {
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        &__content {
+            font-size: rem(20);
+        }
+    }
+}
